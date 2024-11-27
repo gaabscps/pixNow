@@ -24,7 +24,7 @@ export const LoginForm: React.FC = () => {
         type="email"
         value={form?.email || ""}
         errorText="Please enter a valid email"
-        error={!emailRegex(form?.email) && form?.email !== "" ? true : false}
+        error={form?.email?.length > 0 && !emailRegex(form?.email)}
         onChange={(e) => {
           onChange("email", e.target.value);
         }}
@@ -33,9 +33,9 @@ export const LoginForm: React.FC = () => {
         label={"Password"}
         name="password"
         type="password"
-        error={form?.password?.length < 6 && form?.password !== "" ? true : false}
+        error={form?.password?.length < 6 ? true : false}
         errorText="Password must be at least 6 characters"
-        success={form?.password?.length >= 6 && form?.password !== "" ? true : false}
+        success={form?.password?.length >= 6 ? true : false}
         value={form?.password || ""}
         onChange={(e) => onChange("password", e.target.value)}
       />

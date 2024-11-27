@@ -50,6 +50,7 @@ export const CustomInput: React.FC<CustomInputProps> = ({
         backgroundColor="#F7F8F945"
         onBlur={onBlur}
         onBlurCapture={() => setActive(false)}
+        autoComplete="off"
         {...props}
       />
     </Field>
