@@ -66,8 +66,8 @@ const ButtonStorybook: React.FC = () => {
             }}
             options={[
               {
-                label: "primary",
-                value: "",
+                label: "solid",
+                value: "solid",
               },
               {
                 label: "outline",

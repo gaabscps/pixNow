@@ -82,7 +82,7 @@ const ToastStorybook: React.FC = () => {
         <Text padding="20px 0" fontSize="24px" variant="title">
           Exemplo:
         </Text>
-        <Button onClick={() => setIsOpen(true)}>Trigger</Button>
+        <Button variant='solid' onClick={() => setIsOpen(true)}>Trigger</Button>
         <Toast
           message={form?.message}
           subMessage={form?.subMessage}

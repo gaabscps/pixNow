@@ -118,7 +118,7 @@ export const LoginForm: React.FC = () => {
           </Flex>
 
           <Flex gap="16px" flexDirection="column">
-            <Button type="submit" size="2xl">
+            <Button type="submit" size="2xl" variant="solid">
               <Text color="#1E232C" variant="body1.bold">
                 Login
               </Text>

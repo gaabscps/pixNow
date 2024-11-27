@@ -4,7 +4,7 @@ import {
 } from "@chakra-ui/react";
 
 export interface ButtonProps extends ChakraButtonProps {
-  children: React.ReactNode;
+  children: React.ReactNode | string;
 }
 
 export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
@@ -14,14 +14,21 @@ export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
       borderRadius="8px"
       borderColor={props.variant === "outline" ? "#FFFFFF" : "transparent"}
       padding={props.variant === "plain" ? 0 : "auto"}
-      backgroundColor={!props.variant ? "#EFC532" : "transparent"}
-      color={props.variant === "outline" ? "#FFFFFF" : ""}
+      backgroundColor={props.variant === "solid" ? "#EFC532" : "transparent"}
+      color={
+        props.variant === "outline"
+          ? "#FFFFFF"
+          : props.variant === "solid"
+          ? ""
+          : ""
+      }
       _hover={{
-        backgroundColor: !props.variant
-          ? "#EBB700"
-          : props.variant === "outline"
-          ? "#1E232C"
-          : "",
+        backgroundColor:
+          props.variant === "solid"
+            ? "#EBB700"
+            : props.variant === "outline"
+            ? "#1E232C"
+            : "",
       }}
       {...props}
     >
