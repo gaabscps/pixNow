@@ -24,32 +24,31 @@ export const Field = React.forwardRef<HTMLDivElement, FieldProps>(
       isActive,
       ...rest
     } = props;
+
+    const labelFocusStyle = success
+      ? "#03C219"
+      : props.invalid
+      ? "#FF0000"
+      : "#FDB528";
+
+    const textStyle = props.invalid
+      ? "#FF0000"
+      : success && isActive
+      ? "#03C219"
+      : isActive
+      ? "#FDB528"
+      : "#FCFDFF";
+
     return (
       <ChakraField.Root ref={ref} {...rest}>
         {label && (
           <ChakraField.Label
             fontSize={{ md: "12px", mdDown: "14px" }}
             _focusVisible={{
-              borderColor: success
-                ? "#03C219"
-                : props.invalid
-                ? "#FF0000"
-                : "#FDB528",
-              outlineColor: success
-                ? "#03C219"
-                : props.invalid
-                ? "#FF0000"
-                : "#FDB528",
+              borderColor: labelFocusStyle,
+              outlineColor: labelFocusStyle,
             }}
-            color={
-              props.invalid
-                ? "#FF0000"
-                : success && isActive
-                ? "#03C219"
-                : isActive
-                ? "#FDB528"
-                : "#FCFDFF"
-            }
+            color={textStyle}
           >
             {label}
             <ChakraField.RequiredIndicator fallback={optionalText} />
@@ -57,7 +56,9 @@ export const Field = React.forwardRef<HTMLDivElement, FieldProps>(
         )}
         {children}
         {helperText && (
-          <ChakraField.HelperText color={helperTextColor}>
+          <ChakraField.HelperText
+            color={helperTextColor ? helperTextColor : textStyle}
+          >
             {helperText}
           </ChakraField.HelperText>
         )}

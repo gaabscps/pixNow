@@ -3,7 +3,7 @@ import { Field } from "../ui/field";
 import { useState } from "react";
 
 interface CustomInputProps extends InputProps {
-  label: string;
+  label?: string;
   error?: boolean;
   helperText?: string;
   helperTextColor?: string;
@@ -36,6 +36,7 @@ export const CustomInput: React.FC<CustomInputProps> = ({
       label={label}
       isActive={active}
       _focusVisible={props._focusVisible}
+      width="100%"
     >
       <Input
         fontSize="16px"
@@ -46,7 +47,7 @@ export const CustomInput: React.FC<CustomInputProps> = ({
         borderColor={error ? "#FF0000" : ""}
         onFocus={() => setActive(true)}
         borderRadius="8px"
-        padding="27px 28px"
+        padding={!props.size ? "27px 28px" : ""}
         backgroundColor="#F7F8F945"
         onBlur={onBlur}
         onBlurCapture={() => setActive(false)}

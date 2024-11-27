@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Provider } from "@/components/ui/provider";
+import { Sidebar } from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "pixNow - ValePay",
@@ -14,7 +15,12 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <body>
-        <Provider>{children}</Provider>
+        <Provider>
+          <div style={{ backgroundColor: "#16181D", height: "100vh" }}>
+            <Sidebar />
+            {children}
+          </div>
+        </Provider>
       </body>
     </html>
   );

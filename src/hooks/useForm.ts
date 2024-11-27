@@ -6,14 +6,14 @@ export const useForm = ({
 }: {
   initialValues?: Record<string, any>;
 }) => {
-  const [form, setForm] = useState<Record<string, any>>({ initialValues });
+  const [form, setForm] = useState<Record<string, any>>(initialValues);
 
   const onChange = (name: string, value: string) => {
-    setForm({ ...form, [name]: value });
+    setForm((prevForm) => ({ ...prevForm, [name]: value }));
   };
 
   const resetForm = () => {
-    setForm({});
+    setForm(initialValues);
   };
 
   return { form, onChange, setForm, resetForm };

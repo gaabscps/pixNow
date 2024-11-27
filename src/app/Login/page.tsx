@@ -2,7 +2,7 @@ import { Text } from "@/components/Text";
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { LoginForm } from "./components/Form";
 
-export const Login: React.FC = () => {
+const Login: React.FC = () => {
   return (
     <Box
       as="main"
@@ -48,3 +48,5 @@ export const Login: React.FC = () => {
     </Box>
   );
 };
+
+export default Login;
