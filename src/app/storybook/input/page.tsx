@@ -15,7 +15,7 @@ const InputStorybook: React.FC = () => {
       label: "Label",
       helper: "",
       size: "md",
-      width: "300px",
+      width: "180px",
     },
   });
 
@@ -119,7 +119,7 @@ const InputStorybook: React.FC = () => {
           label={form?.label}
           success={form?.status === "success"}
           error={form?.status === "error"}
-          width={form?.width || "300px"}
+          width={form?.width || "180px"}
           helperText={form?.helper}
           errorText={form?.errorText}
           size={form?.size}

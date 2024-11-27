@@ -30,6 +30,7 @@ export const Select: React.FC<SelectProps> = ({ options, label, ...props }) => {
       collection={optionsCollection}
       position="relative"
       margin="1rem 0"
+      minWidth='80px'
       {...props}
     >
       <Text fontSize="12px" variant="body1">

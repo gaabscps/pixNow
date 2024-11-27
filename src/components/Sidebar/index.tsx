@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Text } from "@/components/Text";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Sidebar = () => {
   const pathname = usePathname();
@@ -22,6 +22,14 @@ export const Sidebar = () => {
       path: "/storybook/input",
     },
   ];
+
+  const isMobile = window && window?.innerWidth < 480;
+
+  useEffect(() => {
+    if (isMobile) {
+      setIsOpen(false);
+    }
+  }, []);
 
   return isLogin ? null : (
     <Box
@@ -60,15 +68,33 @@ export const Sidebar = () => {
             <Link
               key={item?.name}
               href={`/storybook/${item?.name?.toLowerCase()}`}
+              onClick={() => isMobile && setIsOpen(false)}
             >
               <Flex
                 as="li"
                 className="sidebar-item"
                 borderRadius="8px"
-                _hover={{ backgroundColor: "#282E38" }}
+                margin="4px 0"
+                backgroundColor={
+                  pathname === `/storybook/${item?.name?.toLowerCase()}`
+                    ? "#EFC532"
+                    : "transparent"
+                }
+                _hover={{ backgroundColor: "#EBB700" }}
                 cursor="pointer"
               >
-                <Text width="100%" padding="8px 32px" variant="body1">
+                <Text
+                  color={
+                    pathname === `/storybook/${item?.name?.toLowerCase()}`
+                      ? "#1E232C"
+                      : "#fff"
+                  }
+                  _hover={{ color: "#1E232C" }}
+                  width="100%"
+                  padding="8px 32px"
+                  variant="body1"
+                  fontWeight="600"
+                >
                   {item?.name}
                 </Text>
               </Flex>

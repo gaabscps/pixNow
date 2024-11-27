@@ -14,6 +14,7 @@ const ButtonStorybook: React.FC = () => {
     initialValues: {
       size: "md",
       variant: "",
+      width: "180px",
     },
   });
 
@@ -24,7 +25,7 @@ const ButtonStorybook: React.FC = () => {
         subtitle="Este foi o componente de botão utilizado para desenvolver este desafio"
         description="Este componente foi criado com base no componente de botão do chakra UI, adicionamos algumas validações para adequar ao design do figma e obtivemos o seguinte resultado:"
       >
-        <Flex gap="16px" marginBottom="40px">
+        <Flex flexWrap={{ lgDown: "wrap" }} gap="16px" marginBottom="40px">
           <Select
             width="100px"
             onValueChange={(e) => {
@@ -85,7 +86,7 @@ const ButtonStorybook: React.FC = () => {
           Exemplo:
         </Text>
         <Button
-          width={form?.width || "300px"}
+          width={form?.width || "180px"}
           variant={form?.variant || ""}
           size={form?.size || "md"}
         >

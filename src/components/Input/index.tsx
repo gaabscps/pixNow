@@ -37,6 +37,7 @@ export const CustomInput: React.FC<CustomInputProps> = ({
       isActive={active}
       _focusVisible={props._focusVisible}
       width="100%"
+      minWidth="80px"
     >
       <Input
         fontSize="16px"
