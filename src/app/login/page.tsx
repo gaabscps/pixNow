@@ -15,6 +15,7 @@ const Login: React.FC = () => {
       position="relative"
     >
       <Flex
+        overflow="auto"
         as="section"
         width="100%"
         height="100%"

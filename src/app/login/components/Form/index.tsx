@@ -117,7 +117,7 @@ export const LoginForm: React.FC = () => {
             </Text>
           </Flex>
 
-          <Flex gap={{ md: "16px", smDown: "" }} flexDirection="column">
+          <Flex gap="16px" flexDirection="column">
             <Button type="submit" size="2xl">
               <Text color="#1E232C" variant="body1.bold">
                 Login
