@@ -15,6 +15,7 @@ export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
       borderColor={props.variant === "outline" ? "#FFFFFF" : "transparent"}
       padding={props.variant === "plain" ? 0 : "auto"}
       backgroundColor={!props.variant ? "#EFC532" : "transparent"}
+      color={props.variant === "outline" ? "#FFFFFF" : ""}
       _hover={{
         backgroundColor: !props.variant
           ? "#EBB700"

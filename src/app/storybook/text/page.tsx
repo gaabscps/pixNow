@@ -21,7 +21,11 @@ const TextStorybook: React.FC = () => {
         subtitle="Este foi o componente de texto utilizado para desenvolver este desafio"
         description="Este componente foi criado para suprir uma necessidade de padronização da tipografia, adicionamos algumas validações para adequar ao design do figma e obtivemos o seguinte resultado:"
       >
-        <Flex flexWrap={{ lgDown: "wrap" }} gap="16px" marginBottom="40px">
+        <Flex
+          flexWrap={{ lgDown: "wrap" }}
+          gap={{ md: "16px", smDown: "" }}
+          marginBottom="40px"
+        >
           <Select
             width="200px"
             onValueChange={(e) => {

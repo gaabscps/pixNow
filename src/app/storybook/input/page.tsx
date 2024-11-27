@@ -26,10 +26,18 @@ const InputStorybook: React.FC = () => {
         subtitle="Este foi o componente de input utilizado para desenvolver este desafio"
         description="Este componente foi criado com base no componente de Input do chakra UI, adicionamos algumas validações e propriedades para adequar ao design do figma e obtivemos o seguinte resultado:"
       >
-        <Flex flexWrap={{ lgDown: "wrap" }} gap="16px" marginBottom="40px">
-          <Flex flexWrap={{ lgDown: "wrap" }} width="100%" gap="16px">
+        <Flex
+          flexWrap={{ lgDown: "wrap" }}
+          gap={{ md: "16px", smDown: "" }}
+          marginBottom="40px"
+        >
+          <Flex
+            flexWrap={{ lgDown: "wrap" }}
+            gap={{ md: "16px", smDown: "" }}
+            width="100%"
+          >
             <Select
-              width="180px"
+              width={{ md: "180px", smDown: "100%" }}
               onValueChange={(e) => {
                 onChange("status", e?.value[0]);
               }}
@@ -50,7 +58,7 @@ const InputStorybook: React.FC = () => {
               label={"Status"}
             />
             <Select
-              width="100px"
+              width={{ md: "100px", smDown: "100%" }}
               onValueChange={(e) => {
                 onChange("size", e?.value[0]);
               }}
@@ -63,7 +71,11 @@ const InputStorybook: React.FC = () => {
               ]}
               label={"Size"}
             />
-            <Flex width="100%" gap="16px">
+            <Flex
+              width="100%"
+              flexWrap={{ lgDown: "wrap" }}
+              gap={{ md: "16px", smDown: "" }}
+            >
               <CustomInput
                 label={"Label"}
                 placeholder="ex: Nome"
@@ -84,7 +96,11 @@ const InputStorybook: React.FC = () => {
               />
             </Flex>
           </Flex>
-          <Flex width="100%" gap="16px">
+          <Flex
+            width="100%"
+            flexWrap={{ lgDown: "wrap" }}
+            gap={{ md: "16px", smDown: "" }}
+          >
             <CustomInput
               placeholder="ex: *required"
               label={"Helper text"}
