@@ -50,7 +50,11 @@ export const LoginForm: React.FC = () => {
           label={"Password"}
           name="password"
           type="password"
-          error={form?.password?.length < 6 ? true : false}
+          error={
+            form?.password?.length > 0 && form?.password?.length < 6
+              ? true
+              : false
+          }
           errorText="Password must be at least 6 characters"
           success={form?.password?.length >= 6 ? true : false}
           value={form?.password || ""}
