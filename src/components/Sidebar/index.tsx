@@ -51,7 +51,7 @@ export const Sidebar = () => {
           ? { lg: "320px", md: "200px", sm: "200px", smDown: "100%" }
           : "50px"
       }
-      height="100vh"
+      height="100dvh"
       className="sidebar"
       zIndex={100}
     >
