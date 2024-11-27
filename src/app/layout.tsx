@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Provider } from "@/components/ui/provider";
 import { Sidebar } from "@/components/Sidebar";
+import "../app/styles.css";
 
 export const metadata: Metadata = {
   title: "pixNow - ValePay",

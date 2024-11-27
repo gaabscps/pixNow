@@ -16,16 +16,20 @@ export const Sidebar = () => {
 
   const items = [
     {
-      name: "Button",
-      path: "/storybook/button",
+      name: "Text",
+      path: "/storybook/text",
     },
     {
       name: "Input",
       path: "/storybook/input",
     },
     {
-      name: "Text",
-      path: "/storybook/text",
+      name: "Button",
+      path: "/storybook/button",
+    },
+    {
+      name: "Toast",
+      path: "/storybook/toast",
     },
   ];
 
