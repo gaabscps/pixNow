@@ -50,7 +50,7 @@ const ToastStorybook: React.FC = () => {
             ]}
             label={"Type"}
           />
-          <Flex gap="16px">
+          <Flex alignItems="flex-end" gap="16px">
             <CustomInput
               label={"Message"}
               name="message"
