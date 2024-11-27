@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# PixNow
 
-First, run the development server:
+**PixNow** é um projeto desenvolvido como parte de um desafio técnico da empresa ValePay. O objetivo é demonstrar habilidades técnicas e práticas na implementação de uma solução funcional e disponibilizar um Storybook para testes e documentação dos componentes
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Como Rodar o Projeto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone o repositório:**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```bash
+   git clone https://github.com/gaabscps/pixNow.git
+   cd pixNow
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Instale as dependências:**
 
-## Learn More
+   Com Yarn:
+   ```bash
+   yarn install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. **Execute o projeto:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   Para iniciar o ambiente de desenvolvimento:
+   ```bash
+   yarn run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   O projeto estará disponível em `http://localhost:3000`.
 
-## Deploy on Vercel
+4. **Faça o login:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Para fazer o login, escreva:
+   - **Email:** `gabriel.andrade@valepay.com.br`
+   - **Senha:** Utilize qualquer senha maior que 6 dígitos.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   Após 3 tentativas de login, seu acesso será bloqueado e será necessário atualizar a página para fazer uma nova tentativa.
+
+## Tecnologias Utilizadas
+
+- **Framework Frontend:** Next.js
+- **Linguagem:** TypeScript
+- **Gerenciamento de Pacotes:** Yarn
+- **Estilização:** ChakraUI v3
+- **Linting:** ESLint
+- **Formatação de Código:** Prettier
+
+## Observações
+
+Este projeto foi criado com foco no desafio proposto pela ValePay. Algumas decisões técnicas foram tomadas para priorizar a simplicidade e o tempo de desenvolvimento, mas mantendo o mínimo de uso de bibliotecas externas para mostrar a capacidade de criação de componentes.
+
+## Licença
+
+Projeto criado para fins de avaliação técnica. Não se aplica licença formal.
