@@ -19,12 +19,17 @@ export const Login: React.FC = () => {
         height="100%"
         color="white"
         fontSize="2xl"
-        justifyContent="space-around"
-        alignItems="center"
+        padding={{ mdDown: "35px 24px" }}
+        justifyContent={{ md: "space-around", mdDown: "center" }}
+        alignItems={{ md: "center", mdDown: "flex-start" }}
       >
         <Box className="login-container">
           <Flex marginBottom="2rem" justifyContent="center">
-            <Image src="/pixNow.svg" alt="pix now logo" width="231px" />
+            <Image
+              src="/pixNow.svg"
+              alt="pix now logo"
+              width={{ md: "231px", mdDown: "148px" }}
+            />
           </Flex>
           <Box>
             <Text marginBottom="0.5rem" variant="title">

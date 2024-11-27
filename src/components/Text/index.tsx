@@ -11,7 +11,7 @@ export const Text: React.FC<TextComponentProps> = ({ children, ...props }) => {
     <Box
       fontSize={
         {
-          title: "40px",
+          title: { md: "40px", mdDown: "32px" },
           subtitle: "18px",
           body1: "16px",
           "body1.bold": "16px",

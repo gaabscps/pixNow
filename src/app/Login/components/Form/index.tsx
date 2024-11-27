@@ -5,6 +5,7 @@ import { useForm } from "@/hooks/useForm";
 import { Box, Flex } from "@chakra-ui/react";
 import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
+import { emailRegex } from "@/helpers/regex";
 
 export const LoginForm: React.FC = () => {
   const { form, onChange } = useForm({
@@ -21,7 +22,11 @@ export const LoginForm: React.FC = () => {
         name="email"
         type="email"
         value={form.email || ""}
-        onChange={(e) => onChange("email", e.target.value)}
+        errorText="Please enter a valid email"
+        error={!emailRegex(form.email) && form.email !== "" ? true : false}
+        onChange={(e) => {
+          onChange("email", e.target.value);
+        }}
       />
       <CustomInput
         label={"Password"}
@@ -37,7 +42,7 @@ export const LoginForm: React.FC = () => {
       </Flex>
 
       <Flex gap="16px" flexDirection="column">
-        <Button backgroundColor="#EFC532" size="2xl">
+        <Button size="2xl">
           <Text color="#1E232C" variant="body1.bold">
             Login
           </Text>
