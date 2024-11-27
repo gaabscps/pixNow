@@ -55,6 +55,20 @@ export const Sidebar = () => {
       className="sidebar"
       zIndex={100}
     >
+      <Box
+        display={{
+          lg: "none",
+          md: "none",
+          sm: "none",
+          smDown: "block",
+        }}
+        position="fixed"
+        top="8px"
+        padding="8px 16px"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <GiHamburgerMenu color="#fff" />
+      </Box>
       <Flex
         display={isOpen ? "flex" : "none"}
         flexDirection="column"
@@ -131,20 +145,6 @@ export const Sidebar = () => {
           </Link>
         </Flex>
       </Flex>
-      <Box
-        display={{
-          lg: "none",
-          md: "none",
-          sm: "none",
-          smDown: "block",
-        }}
-        position="fixed"
-        top="8px"
-        padding="8px 16px"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <GiHamburgerMenu />
-      </Box>
     </Box>
   );
 };

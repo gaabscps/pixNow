@@ -28,9 +28,13 @@ const ToastStorybook: React.FC = () => {
         subtitle="Este foi o componente de toast utilizado para desenvolver este desafio"
         description="Este componente foi criado para atendeder às necessidades deste desafio, o toast é um componente de feedback visual que exibe uma mensagem após uma ação do usuário. "
       >
-        <Flex flexWrap={{ lgDown: "wrap" }} gap="16px" marginBottom="40px">
+        <Flex
+          flexWrap={{ lgDown: "wrap" }}
+          gap={{ md: "16px", smDown: "" }}
+          marginBottom="40px"
+        >
           <Select
-            width="100px"
+            width={{ md: "100px", smDown: "100%" }}
             onValueChange={(e) => {
               onChange("type", e?.value[0]);
             }}
@@ -50,7 +54,11 @@ const ToastStorybook: React.FC = () => {
             ]}
             label={"Type"}
           />
-          <Flex alignItems="flex-end" gap="16px">
+          <Flex
+            flexWrap={{ smDown: "wrap" }}
+            gap={{ md: "16px", sm: "16px", smDown: "" }}
+            alignItems="flex-end"
+          >
             <CustomInput
               label={"Message"}
               name="message"
