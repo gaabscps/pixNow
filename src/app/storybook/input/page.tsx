@@ -29,10 +29,7 @@ const InputStorybook: React.FC = () => {
         <Flex flexWrap={{ lgDown: "wrap" }} gap="16px" marginBottom="40px">
           <Flex flexWrap={{ lgDown: "wrap" }} width="100%" gap="16px">
             <Select
-              width={{
-                base: "100%",
-                md: "100px",
-              }}
+              width="180px"
               onValueChange={(e) => {
                 onChange("status", e?.value[0]);
               }}
@@ -53,10 +50,7 @@ const InputStorybook: React.FC = () => {
               label={"Status"}
             />
             <Select
-              width={{
-                base: "100%",
-                md: "80px",
-              }}
+              width="100px"
               onValueChange={(e) => {
                 onChange("size", e?.value[0]);
               }}

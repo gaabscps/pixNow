@@ -21,15 +21,19 @@ export const Sidebar = () => {
       name: "Input",
       path: "/storybook/input",
     },
+    {
+      name: "Text",
+      path: "/storybook/text",
+    },
   ];
 
-  const isMobile = window && window?.innerWidth < 480;
+  const isMobile = typeof window !== "undefined" && window?.innerWidth < 480;
 
   useEffect(() => {
     if (isMobile) {
       setIsOpen(false);
     }
-  }, []);
+  }, [isMobile]);
 
   return isLogin ? null : (
     <Box

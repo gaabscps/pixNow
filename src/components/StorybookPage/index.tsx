@@ -16,12 +16,12 @@ export const StorybookPage: React.FC<StorybookPageProps> = ({
 }) => {
   return (
     <>
-      <Box paddingBottom="24px">
+      <Box paddingBottom="8px">
         <Text variant="title">{title}</Text>
         <Text variant="body1">{subtitle}</Text>
       </Box>
 
-      <Box padding="24px 0">
+      <Box padding="8px 0 16px">
         <Text variant="body1">{description}</Text>
       </Box>
 

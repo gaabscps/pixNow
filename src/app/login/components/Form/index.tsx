@@ -7,7 +7,6 @@ import { Text } from "@/components/Text";
 import { Button } from "@/components/Button";
 import { emailRegex } from "@/helpers/regex";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export const LoginForm: React.FC = () => {
   const router = useRouter();
@@ -18,9 +17,7 @@ export const LoginForm: React.FC = () => {
     },
   });
 
-  useEffect(() => {
-    console.log(form);
-  }, [form]);
+
 
   return (
     <Box>
