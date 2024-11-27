@@ -75,6 +75,7 @@ export const Sidebar = () => {
         justifyContent="space-between"
         height="100%"
         padding="0 16px"
+        overflow="auto"
       >
         <Box>
           <Flex
