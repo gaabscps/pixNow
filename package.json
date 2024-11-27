@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-S    "build-storybook": "build-storybook",
+   "build-storybook": "build-storybook",
     "dev": "npm run build-storybook && next dev",
     "build": "next build",
     "lint": "next lint",
