@@ -6,18 +6,50 @@ export interface FieldProps extends Omit<ChakraField.RootProps, "label"> {
   helperText?: React.ReactNode;
   errorText?: React.ReactNode;
   optionalText?: React.ReactNode;
+  helperTextColor?: string;
+  success?: boolean;
+  isActive?: boolean;
 }
 
 export const Field = React.forwardRef<HTMLDivElement, FieldProps>(
   function Field(props, ref) {
-    const { label, children, helperText, errorText, optionalText, ...rest } =
-      props;
+    const {
+      label,
+      children,
+      helperText,
+      helperTextColor,
+      errorText,
+      optionalText,
+      success,
+      isActive,
+      ...rest
+    } = props;
     return (
       <ChakraField.Root ref={ref} {...rest}>
         {label && (
           <ChakraField.Label
             fontSize={{ md: "12px", mdDown: "14px" }}
-            color="#FCFDFFCC"
+            _focusVisible={{
+              borderColor: success
+                ? "#03C219"
+                : props.invalid
+                ? "#FF0000"
+                : "#FDB528",
+              outlineColor: success
+                ? "#03C219"
+                : props.invalid
+                ? "#FF0000"
+                : "#FDB528",
+            }}
+            color={
+              props.invalid
+                ? "#FF0000"
+                : success && isActive
+                ? "#03C219"
+                : isActive
+                ? "#FDB528"
+                : "#FCFDFF"
+            }
           >
             {label}
             <ChakraField.RequiredIndicator fallback={optionalText} />
@@ -25,10 +57,14 @@ export const Field = React.forwardRef<HTMLDivElement, FieldProps>(
         )}
         {children}
         {helperText && (
-          <ChakraField.HelperText>{helperText}</ChakraField.HelperText>
+          <ChakraField.HelperText color={helperTextColor}>
+            {helperText}
+          </ChakraField.HelperText>
         )}
         {errorText && (
-          <ChakraField.ErrorText>{errorText}</ChakraField.ErrorText>
+          <ChakraField.ErrorText color="#FF0000">
+            {errorText}
+          </ChakraField.ErrorText>
         )}
       </ChakraField.Root>
     );

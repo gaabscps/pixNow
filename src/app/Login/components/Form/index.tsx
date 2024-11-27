@@ -18,6 +18,7 @@ export const LoginForm: React.FC = () => {
   return (
     <Box>
       <CustomInput
+        success={emailRegex(form.email) && form.email !== "" ? true : false}
         label={"Enter your email"}
         name="email"
         type="email"
@@ -32,6 +33,9 @@ export const LoginForm: React.FC = () => {
         label={"Password"}
         name="password"
         type="password"
+        error={form.password.length < 6 && form.password !== "" ? true : false}
+        errorText="Password must be at least 6 characters"
+        success={form.password.length >= 6 && form.password !== "" ? true : false}
         value={form.password || ""}
         onChange={(e) => onChange("password", e.target.value)}
       />
