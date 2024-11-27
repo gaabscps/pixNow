@@ -17,7 +17,7 @@ export default function RootLayout({
     <html suppressHydrationWarning>
       <body>
         <Provider>
-          <div style={{ backgroundColor: "#16181D", height: "100vh" }}>
+          <div style={{ backgroundColor: "#16181D", height: "100dvh" }}>
             <Sidebar />
             {children}
           </div>

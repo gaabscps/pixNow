@@ -10,7 +10,7 @@ const Login: React.FC = () => {
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
       backgroundPosition="center"
-      height="100vh"
+      height="100dvh"
       width="100%"
       position="relative"
     >
