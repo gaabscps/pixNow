@@ -56,7 +56,7 @@ const ButtonStorybook: React.FC = () => {
             label={"Size"}
           />
           <Select
-            width="100px"
+            width="180px"
             onValueChange={(e) => {
               onChange("variant", e?.value[0]);
             }}
@@ -68,6 +68,10 @@ const ButtonStorybook: React.FC = () => {
               {
                 label: "outline",
                 value: "outline",
+              },
+              {
+                label: "plain",
+                value: "plain",
               },
             ]}
             label={"Variant"}
